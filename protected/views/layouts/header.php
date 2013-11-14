@@ -20,7 +20,7 @@
                 <?php if (Yii::app()->user->name == "Guest")
                     {
                 ?>
-                <li><a href="/testdrive/index.php/site/login">Login</a></li>
+                <li><a href="/testdrive/index.php/site/login">Sign in</a></li>
                 <?php }
                     else
                     {

@@ -37,12 +37,9 @@ h1 {
 }
 
 h2 {
-    font-size: 1.2em;
     letter-spacing: -1px;
     margin-bottom: 30px;
     text-align: center;
-    font-weight: normal;
-    color: #eaeaea;
 }
 
 p {
@@ -72,7 +69,7 @@ p {
 /* mainbody */
 
 #page {
-    min-height: 560px;
+    min-height: 640px;
 }
 
 /* footer */
@@ -104,4 +101,11 @@ footer ul {
 footer ul li {
     float: left;
     margin-left: 10px;
+}
+
+/* Sign in */
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
 }

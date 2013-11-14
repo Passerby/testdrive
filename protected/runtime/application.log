@@ -66,3 +66,37 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/testdrive/index.php/site/about
 ---
+2013/11/14 02:52:09 [error] [php] Object of class LoginForm could not be converted to string (C:\wamp\www\testdrive\protected\views\site\login.php:63)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\testdrive\protected\controllers\SiteController.php(98): SiteController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/index.php/site/login
+in C:\wamp\www\testdrive\protected\views\site\login.php (63)
+in C:\wamp\www\testdrive\protected\controllers\SiteController.php (98)
+in C:\wamp\www\testdrive\index.php (13)
+2013/11/14 03:00:41 [error] [php] Undefined variable: form (C:\wamp\www\testdrive\protected\views\site\login.php:28)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\testdrive\protected\controllers\SiteController.php(98): SiteController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/index.php/site/login
+in C:\wamp\www\testdrive\protected\views\site\login.php (28)
+in C:\wamp\www\testdrive\protected\controllers\SiteController.php (98)
+in C:\wamp\www\testdrive\index.php (13)
