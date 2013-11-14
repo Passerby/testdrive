@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -10,17 +10,23 @@
             <a class="navbar-brand" href="/testdrive/"><?php echo CHtml::encode(Yii::app()->name); ?></a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/testdrive/">Home</a></li>
-                <li><a href="/testdrive/index.php/site/page?view=about">About</a></li>
-                <li><a href="/testdrive/index.php/site/contact">Contact</a></li>
-            </ul>
+        <?php
+        $this->widget('zii.widgets.CMenu',array(
+            'htmlOptions'=>array('class'=>'nav navbar-nav'),
+			'items'=>array(
+				array('label'=>'Home', 'url'=>array('/site/index')),
+				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>'Contact', 'url'=>array('/site/contact')),
+			),
+        ));
+
+        ?>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                 <?php if (Yii::app()->user->name == "Guest")
                     {
                 ?>
-                <li><a href="/testdrive/index.php/site/login">Sign in</a></li>
+                <li><a href="/testdrive/index.php/user/signin">Sign in</a></li>
                 <?php }
                     else
                     {
@@ -33,13 +39,13 @@
                         <li><a href="">Setting</a></li>
                         <li class="divider"></li>
                         <li>
-                            <a href="/testdrive/index.php/site/logout">Logout</a>
+                            <a href="/testdrive/index.php/user/signout">Sign out</a>
                         </li>
-                        </ul>
+                    </ul>
                 <?php } ?>
                 </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
-</div><!--/.header-->
+</header>
 

@@ -42,12 +42,6 @@ h2 {
     text-align: center;
 }
 
-p {
-    font-size: 1.1em;
-    line-height: 1.7em;
-}
-
-
 /* header */
 
 #logo {
@@ -78,19 +72,6 @@ footer {
     margin-top: 45px;
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
-    color: #999;
-}
-
-footer a {
-    color: #555;
-}
-
-footer a:hover {
-    color: #222;
-}
-
-footer small {
-    float: left;
 }
 
 footer ul {
@@ -108,4 +89,13 @@ footer ul li {
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
+}
+
+/* Sign up */
+.form-signup {
+    max-width: 330px;
+    margin: 0 auto;
+}
+.form-signup input {
+    margin: 15px auto;
 }
