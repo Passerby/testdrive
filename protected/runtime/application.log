@@ -1109,3 +1109,5 @@ Stack trace:
 REQUEST_URI=/testdrive/index.php/user/create
 in C:\wamp\www\testdrive\protected\controllers\UserController.php (36)
 in C:\wamp\www\testdrive\index.php (13)
+2013/11/15 09:35:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.tbl_micropost' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_micropost`.
+in C:\wamp\www\testdrive\index.php (13)
