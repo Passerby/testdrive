@@ -7,15 +7,17 @@ $this->pageTitle=Yii::app()->name . ' - Sign in';
 $this->breadcrumbs=array(
     'Sign in',
 );
+foreach(Yii::app()->user->getFlashes() as $key => $message) {
+    echo '<div class="alert alert-' . $key . '">' . $message . "</div>";
+}
 ?>
-
 <h1>Sign in</h1>
 
 <div class="form">
 <?php
 
     $form=$this->beginWidget('CActiveForm', array(
-        'id'=>'login-formdsda',
+        'id'=>'login-form',
         'htmlOptions'=>array(
             'class'=>'form-signin'
         ),
@@ -58,7 +60,7 @@ $this->breadcrumbs=array(
             'class'=>'btn btn-lg btn-primary btn-block',
         )); ?>
     </div>
-    <div>New User? Sign up now!</div>
+    <p>New User? <a href="/testdrive/index.php/user/signup">Sign up now!</a></p>
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

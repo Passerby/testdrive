@@ -14,7 +14,8 @@
         $this->widget('zii.widgets.CMenu',array(
             'htmlOptions'=>array('class'=>'nav navbar-nav'),
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
+                array('label'=>'Home', 'url'=>array('/site/index')),
+                array('label'=>'Users', 'url'=>array('/user')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 			),
@@ -26,7 +27,7 @@
                 <?php if (Yii::app()->user->name == "Guest")
                     {
                 ?>
-                <li><a href="/testdrive/index.php/user/signin">Sign in</a></li>
+                <li><a href="/testdrive/index.php/site/login">Sign in</a></li>
                 <?php }
                     else
                     {
@@ -39,7 +40,7 @@
                         <li><a href="">Setting</a></li>
                         <li class="divider"></li>
                         <li>
-                            <a href="/testdrive/index.php/user/signout">Sign out</a>
+                            <a href="/testdrive/index.php/site/signout">Sign out</a>
                         </li>
                     </ul>
                 <?php } ?>

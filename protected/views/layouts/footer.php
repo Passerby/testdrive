@@ -1,4 +1,4 @@
-<footer id="footer" class="navbar-fixed-bottom">
+<footer id="footer" class="">
     <nav class="text-muted credit clearfix">
         <ul>
             <li>Copyright &copy; <?php echo date('Y'); ?> by My Company.</li>

@@ -15,7 +15,6 @@
 
 <?php $this->beginContent('/layouts/header'); ?>
 <?php $this->endContent();?><!-- header -->
-
 <div class="container" id="page">
 
     <?php
@@ -33,7 +32,6 @@
     <?php echo $content; ?>
 
 </div><!-- page -->
-
 <?php $this->beginContent('/layouts/footer'); ?>
 <?php $this->endContent();?><!-- footer -->
 </body>
