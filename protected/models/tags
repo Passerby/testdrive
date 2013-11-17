@@ -1,0 +1,50 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ContactForm	ContactForm.php	/^class ContactForm extends CFormModel$/;"	c
+LoginForm	LoginForm.php	/^class LoginForm extends CFormModel$/;"	c
+Micropost	Micropost.php	/^class Micropost extends CActiveRecord$/;"	c
+SignupForm	SignupForm.php	/^class SignupForm extends CFormModel$/;"	c
+User	User.php	/^class User extends CActiveRecord$/;"	c
+_identity	LoginForm.php	/^            $this->_identity=new UserIdentity($this->username, $this->password);$/;"	v
+_identity	LoginForm.php	/^            $this->_identity=new UserIdentity($this->username,$this->password);$/;"	v
+_identity	LoginForm.php	/^    private $_identity;$/;"	v
+attributeLabels	ContactForm.php	/^	public function attributeLabels()$/;"	f
+attributeLabels	LoginForm.php	/^    public function attributeLabels()$/;"	f
+attributeLabels	Micropost.php	/^    public function attributeLabels()$/;"	f
+attributeLabels	User.php	/^    public function attributeLabels()$/;"	f
+authenticate	LoginForm.php	/^    public function authenticate($attribute,$params)$/;"	f
+body	ContactForm.php	/^	public $body;$/;"	v
+confirmation	SignupForm.php	/^    public $confirmation;$/;"	v
+criteria	Micropost.php	/^        $criteria=new CDbCriteria;$/;"	v
+criteria	User.php	/^        $criteria=new CDbCriteria;$/;"	v
+duration	LoginForm.php	/^            $duration=$this->rememberMe ? 3600*24*30 : 0; \/\/ 30 days$/;"	v
+email	ContactForm.php	/^	public $email;$/;"	v
+getAccessLevelList	User.php	/^    static function getAccessLevelList( $level = null ){$/;"	f
+levelList	User.php	/^        $levelList=array($/;"	v
+login	LoginForm.php	/^    public function login()$/;"	f
+model	Micropost.php	/^    public static function model($className=__CLASS__)$/;"	f
+model	User.php	/^    public static function model($className=__CLASS__)$/;"	f
+name	ContactForm.php	/^	public $name;$/;"	v
+password	LoginForm.php	/^    public $password;$/;"	v
+password	SignupForm.php	/^    public $password;$/;"	v
+relations	Micropost.php	/^    public function relations()$/;"	f
+relations	User.php	/^    public function relations()$/;"	f
+rememberMe	LoginForm.php	/^    public $rememberMe;$/;"	v
+rules	ContactForm.php	/^	public function rules()$/;"	f
+rules	LoginForm.php	/^    public function rules()$/;"	f
+rules	Micropost.php	/^    public function rules()$/;"	f
+rules	SignupForm.php	/^    public function rules()$/;"	f
+rules	User.php	/^    public function rules()$/;"	f
+search	Micropost.php	/^    public function search()$/;"	f
+search	User.php	/^    public function search()$/;"	f
+signup	SignupForm.php	/^    public function signup()$/;"	f
+subject	ContactForm.php	/^	public $subject;$/;"	v
+tableName	Micropost.php	/^    public function tableName()$/;"	f
+tableName	User.php	/^    public function tableName()$/;"	f
+username	LoginForm.php	/^    public $username;$/;"	v
+username	SignupForm.php	/^    public $username;$/;"	v
+verifyCode	ContactForm.php	/^	public $verifyCode;$/;"	v

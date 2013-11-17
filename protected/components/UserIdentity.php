@@ -28,8 +28,11 @@ class UserIdentity extends CUserIdentity
         elseif($users->password!==$this->password)
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
         else
+        {
+            $this->_id=$users->id;
             $this->errorCode=self::ERROR_NONE;
-        return !$this->errorCode;
+        }
+            return !$this->errorCode;
     }
 
     public function getId()

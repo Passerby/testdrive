@@ -28,12 +28,12 @@ class MicropostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','lazy','eager'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'users'=>array('*'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -68,8 +68,10 @@ class MicropostController extends Controller
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Micropost']))
-		{
+        {
+            $uid=Yii::app()->user->id;
 			$model->attributes=$_POST['Micropost'];
+            $model->attributes['user_id']=$uid;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -158,6 +160,18 @@ class MicropostController extends Controller
 		return $model;
 	}
 
+    public function actionLazy()
+    {
+        $micropost=Micropost::model()->findByPk(0);
+        $user=$micropost->user;
+        CVarDumper::dump($user,10,true);
+    }
+
+    public function actionEager()
+    {
+        $micropost=Micropost::model()->with('user')->findByPk(0);
+        CVarDumper::dump($micropost->user->name,10,true);
+    }
 	/**
 	 * Performs the AJAX validation.
 	 * @param Micropost $model the model to be validated
