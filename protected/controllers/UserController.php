@@ -66,10 +66,11 @@ class UserController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-        die('hehe');
 		if(isset($_POST['User']))
 		{
-			$model->attributes=$_POST['User'];
+            $model->attributes=$_POST['User'];
+            CVarDumper::dump($model,10,true);
+            die();
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

@@ -15,13 +15,9 @@
 
 <?php $this->beginContent('/layouts/header'); ?>
 <?php $this->endContent();?><!-- header -->
+
 <div class="container" id="page">
 
-    <?php
-    foreach(Yii::app()->user->getFlashes() as $key => $message) {
-        echo '<div class="alert alert-' . $key . '">' . $message . "</div>\n";
-    }
-    ?>
     <?php if(isset($this->breadcrumbs)):?>
     <?php
         $this->widget('zii.widgets.CBreadcrumbs', array(
@@ -29,9 +25,14 @@
     ?><!-- breadcrumbs -->
     <?php endif?>
 
+    <?php
+        foreach(Yii::app()->user->getFlashes() as $key => $message) {
+            echo '<div class="alert alert-' . $key . '">' . $message . "</div>\n";
+        }
+    ?>
     <?php echo $content; ?>
-
 </div><!-- page -->
+
 <?php $this->beginContent('/layouts/footer'); ?>
 <?php $this->endContent();?><!-- footer -->
 </body>

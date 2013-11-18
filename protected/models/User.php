@@ -32,9 +32,12 @@ class User extends CActiveRecord
         return array(
             array('username, password, email', 'required'),
             array('username, password, email', 'length', 'max'=>128),
+            array('accessLevel', 'default', 'value'=>0),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('id, username, password, email', 'safe', 'on'=>'search'),
+            array('id, username, accessLevel, email', 'safe', 'on'=>'search'),
+            array('email', 'unique'),
+            array('email', 'email', 'message'=>'The email is not correct'),
         );
     }
 
@@ -59,6 +62,7 @@ class User extends CActiveRecord
             'username' => 'Username',
             'password' => 'Password',
             'email' => 'Email',
+            'accessLevel' => 'AccessLevel',
         );
     }
 

@@ -14,8 +14,7 @@
         $this->widget('zii.widgets.CMenu',array(
             'htmlOptions'=>array('class'=>'nav navbar-nav'),
 			'items'=>array(
-                array('label'=>'Home', 'url'=>array('/site/index')),
-                array('label'=>'Micropost', 'url'=>array('/micropost')),
+                array('label'=>'Home', 'url'=>array('/micropost')),
                 array('label'=>'Users', 'url'=>array('/user')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),

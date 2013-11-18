@@ -103,7 +103,29 @@ class SiteController extends Controller
      */
     public function actionSignup()
     {
-        $this->render('signup');
+        $model=new SignupForm;
+        $this->performAjaxValidation($model);
+
+		if(isset($_POST['SignupForm']))
+		{
+			$model->attributes=$_POST['SignupForm'];
+            $user=new User;
+            $user->username=$model->username;
+            $user->email=$model->email;
+            $user->password=md5($model->password);
+            if($user->validate('email') && $user->save())
+            {
+                Yii::app()->user->setFlash('success', "Sign up success.");
+                $this->redirect('login');
+            }
+            else
+            {
+                Yii::app()->user->setFlash('danger', "Email is already exists");
+            }
+
+		}
+
+        $this->render('signup',array('model'=>$model));
     }
 
 	/**
@@ -113,7 +135,15 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
-	}
+    }
 
+	protected function performAjaxValidation($model)
+	{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='signup-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+	}
 
 }

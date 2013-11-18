@@ -18,18 +18,20 @@ class UserIdentity extends CUserIdentity
      */
 
     private $_id;
+    private $_username;
 
     public function authenticate()
     {
         // $this LoginForm
-        $users=User::model()->findByAttributes(array('username'=>$this->username));
+        $users=User::model()->findByAttributes(array('email'=>$this->username));
         if($users===null)
             $this->errorCode=self::ERROR_USERNAME_INVALID;
-        elseif($users->password!==$this->password)
+        elseif($users->password!==md5($this->password))
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
         else
         {
             $this->_id=$users->id;
+            $this->_username=$users->username;
             $this->errorCode=self::ERROR_NONE;
         }
             return !$this->errorCode;
@@ -39,4 +41,8 @@ class UserIdentity extends CUserIdentity
     {
         return $this->_id;
     }
+	public function getName()
+	{
+		return $this->_username;
+	}
 }

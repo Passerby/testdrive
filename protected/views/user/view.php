@@ -25,5 +25,11 @@ $this->menu=array(
 		'username',
 		'password',
 		'email',
-	),
-)); ?>
+    ),
+));
+
+?>
+
+<?php
+echo GlobalFunc::get_gravatar($model->email, $s = 80, $d = 'mm', $r = 'g', $img = true, $atts = array());
+?>

@@ -4,13 +4,15 @@
 ?>
 
 <div class="view">
+    <?php
+    //echo GlobalFunc::dump($data);
+    ?>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />
+    <?php
+        echo GlobalFunc::get_gravatar($data->user->email, $s = 40, $d = 'mm', $r = 'g', $img = true, $atts = array());
+    ?>
+	<b><?php echo CHtml::encode($data->user->username); ?></b>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->user_id); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('content')); ?>:</b>

@@ -13,13 +13,13 @@
 	<?php echo CHtml::encode($data->username); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
-	<?php echo CHtml::encode($data->password); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
+    <b><?php
+          $email = $data->email;
+          echo CHtml::encode($email)?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
-
+    <?php
+        echo GlobalFunc::get_gravatar($email, $s = 80, $d = 'mm', $r = 'g', $img = true, $atts = array());
+    ?>
 
 </div>

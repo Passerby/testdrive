@@ -7,9 +7,6 @@ $this->pageTitle=Yii::app()->name . ' - Sign in';
 $this->breadcrumbs=array(
     'Sign in',
 );
-foreach(Yii::app()->user->getFlashes() as $key => $message) {
-    echo '<div class="alert alert-' . $key . '">' . $message . "</div>";
-}
 ?>
 <h1>Sign in</h1>
 
@@ -28,15 +25,15 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
 )); ?>
 
     <div class="row">
-        <?php echo $form->labelEx($model,'username'); ?>
+        <?php echo $form->labelEx($model,'email'); ?>
         <?php
-            echo $form->textField($model,'username',array(
+            echo $form->textField($model,'email',array(
                 'class'=>'form-control',
                 'placeholder'=>'Username',
                 'required'=>'',
                 'autofocus'=>''
         )); ?>
-        <?php echo $form->error($model,'username'); ?>
+        <?php echo $form->error($model,'email'); ?>
     </div>
 
     <div class="row">
@@ -60,7 +57,7 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
             'class'=>'btn btn-lg btn-primary btn-block',
         )); ?>
     </div>
-    <p>New User? <a href="/testdrive/index.php/user/signup">Sign up now!</a></p>
+    <p>New User? <a href="/testdrive/index.php/site/signup">Sign up now!</a></p>
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

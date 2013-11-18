@@ -1,0 +1,62 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+MicropostController	.\MicropostController.php	/^class MicropostController extends Controller$/;"	c
+SiteController	.\SiteController.php	/^class SiteController extends Controller$/;"	c
+UserController	.\UserController.php	/^class UserController extends Controller$/;"	c
+accessRules	.\MicropostController.php	/^	public function accessRules()$/;"	f
+accessRules	.\UserController.php	/^	public function accessRules()$/;"	f
+actionAdmin	.\MicropostController.php	/^	public function actionAdmin()$/;"	f
+actionAdmin	.\UserController.php	/^	public function actionAdmin()$/;"	f
+actionContact	.\SiteController.php	/^	public function actionContact()$/;"	f
+actionCreate	.\MicropostController.php	/^	public function actionCreate()$/;"	f
+actionCreate	.\UserController.php	/^	public function actionCreate()$/;"	f
+actionDelete	.\MicropostController.php	/^	public function actionDelete($id)$/;"	f
+actionDelete	.\UserController.php	/^	public function actionDelete($id)$/;"	f
+actionEager	.\MicropostController.php	/^    public function actionEager()$/;"	f
+actionError	.\SiteController.php	/^	public function actionError()$/;"	f
+actionIndex	.\MicropostController.php	/^	public function actionIndex()$/;"	f
+actionIndex	.\SiteController.php	/^	public function actionIndex()$/;"	f
+actionIndex	.\UserController.php	/^	public function actionIndex()$/;"	f
+actionLazy	.\MicropostController.php	/^    public function actionLazy()$/;"	f
+actionLogin	.\SiteController.php	/^	public function actionLogin()$/;"	f
+actionSignout	.\SiteController.php	/^	public function actionSignout()$/;"	f
+actionSignup	.\SiteController.php	/^    public function actionSignup()$/;"	f
+actionUpdate	.\MicropostController.php	/^	public function actionUpdate($id)$/;"	f
+actionUpdate	.\UserController.php	/^	public function actionUpdate($id)$/;"	f
+actionView	.\MicropostController.php	/^	public function actionView($id)$/;"	f
+actionView	.\UserController.php	/^	public function actionView($id)$/;"	f
+actions	.\SiteController.php	/^	public function actions()$/;"	f
+dataProvider	.\MicropostController.php	/^		$dataProvider=new CActiveDataProvider('Micropost');$/;"	v
+dataProvider	.\UserController.php	/^		$dataProvider=new CActiveDataProvider('User');$/;"	v
+filters	.\MicropostController.php	/^	public function filters()$/;"	f
+filters	.\UserController.php	/^	public function filters()$/;"	f
+headers	.\SiteController.php	/^				$headers="From: $name <{$model->email}>\\r\\n".$/;"	v
+layout	.\MicropostController.php	/^	public $layout='\/\/layouts\/column2';$/;"	v
+layout	.\UserController.php	/^	public $layout='\/\/layouts\/column2';$/;"	v
+loadModel	.\MicropostController.php	/^	public function loadModel($id)$/;"	f
+loadModel	.\UserController.php	/^	public function loadModel($id)$/;"	f
+micropost	.\MicropostController.php	/^        $micropost=Micropost::model()->findByPk(0);$/;"	v
+micropost	.\MicropostController.php	/^        $micropost=Micropost::model()->with('user')->findByPk(0);$/;"	v
+model	.\MicropostController.php	/^		$model=$this->loadModel($id);$/;"	v
+model	.\MicropostController.php	/^		$model=Micropost::model()->findByPk($id);$/;"	v
+model	.\MicropostController.php	/^		$model=new Micropost('search');$/;"	v
+model	.\MicropostController.php	/^		$model=new Micropost;$/;"	v
+model	.\SiteController.php	/^		$model=new ContactForm;$/;"	v
+model	.\SiteController.php	/^		$model=new LoginForm;$/;"	v
+model	.\SiteController.php	/^        $model=new SignupForm;$/;"	v
+model	.\UserController.php	/^		$model=$this->loadModel($id);$/;"	v
+model	.\UserController.php	/^		$model=User::model()->findByPk($id);$/;"	v
+model	.\UserController.php	/^		$model=new User('search');$/;"	v
+model	.\UserController.php	/^		$model=new User;$/;"	v
+name	.\SiteController.php	/^				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';$/;"	v
+performAjaxValidation	.\MicropostController.php	/^	protected function performAjaxValidation($model)$/;"	f
+performAjaxValidation	.\SiteController.php	/^	protected function performAjaxValidation($model)$/;"	f
+performAjaxValidation	.\UserController.php	/^	protected function performAjaxValidation($model)$/;"	f
+subject	.\SiteController.php	/^				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';$/;"	v
+uid	.\MicropostController.php	/^            $uid=Yii::app()->user->id;$/;"	v
+user	.\MicropostController.php	/^        $user=$micropost->user;$/;"	v
+user	.\SiteController.php	/^            $user=new User;$/;"	v

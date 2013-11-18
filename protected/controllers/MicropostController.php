@@ -71,7 +71,9 @@ class MicropostController extends Controller
         {
             $uid=Yii::app()->user->id;
 			$model->attributes=$_POST['Micropost'];
-            $model->attributes['user_id']=$uid;
+            $model->user_id=$uid;
+            //GlobalFunc::dump($model);
+            //die();
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -122,12 +124,18 @@ class MicropostController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('Micropost');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+    public function actionIndex()
+    {
+        $dataProvider=new CActiveDataProvider('Micropost', array(
+            'criteria'=>array(
+                'condition'=>'user_id=user.id',
+                'with'=>array('user'),
+            )
+        ));
+
+        $this->render('index',array(
+            'dataProvider'=>$dataProvider,
+        ));
 	}
 
 	/**
@@ -156,7 +164,7 @@ class MicropostController extends Controller
 	{
 		$model=Micropost::model()->findByPk($id);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+            throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
 
