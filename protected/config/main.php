@@ -16,6 +16,7 @@ return array(
     'import'=>array(
         'application.models.*',
         'application.components.*',
+        'application.modules.srbac.controllers.SBaseController',
     ),
 
     'modules'=>array(
@@ -55,6 +56,7 @@ return array(
         // uncomment the following to use a MySQL database
 
         'db'=>array(
+            'class'=>'CDbConnection',
             'connectionString' => 'mysql:host=localhost;dbname=testdrive',
             'emulatePrepare' => true,
             'username' => 'root',

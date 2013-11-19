@@ -99,3 +99,21 @@ footer ul li {
 .form-signup input {
     margin: 15px auto;
 }
+
+.createMicropost textarea {
+	resize: none;
+}
+
+.row.buttons {
+	margin: 10px auto;
+}
+
+@media (min-width: 900px)
+.content {
+width: 870px;
+}
+
+@media (min-width: 768px)
+.content {
+width: 750px;
+}

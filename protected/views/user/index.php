@@ -16,5 +16,22 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
+    'itemView'=>'_view',
+    'template'=>'{pager}<div class="sorter">{sorter}</div><div class="list">{items}</div>{pager}<span class="summary">{summary}</span>',
+    'pagerCssClass'=>'pager_container',
+    'pager'=>array(
+        'class'=>'CLinkPager',
+        'cssFile'=>false,
+        'header'=>'',
+        'footer'=>'',
+        'hiddenPageCssClass'=>'disabled',
+        'firstPageLabel'=>'<<',
+        'lastPageLabel'=>'>>',
+        'nextPageLabel'=>'>',
+        'prevPageLabel'=>'<',
+        'selectedPageCssClass'=>'active',
+        'htmlOptions'=>array(
+            'class'=>'pagination',
+        ),
+    ),
 )); ?>

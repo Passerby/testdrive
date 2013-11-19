@@ -5,19 +5,18 @@
 
 <div class="view">
     <?php
-    //echo GlobalFunc::dump($data);
+    CVarDumper::dump($data,10,true);
     ?>
+    <img src="<?php echo GlobalFunc::get_gravatar($data->user->email,$s=40);?>" class="img-responsive" alt="Responsive image">
+    <b><a href="/testdrive/index.php/user/<?php echo CHtml::encode($data->user->id) ?>">
+        <?php echo CHtml::encode($data->user->username); ?>
+    </a></b>
 
-    <?php
-        echo GlobalFunc::get_gravatar($data->user->email, $s = 40, $d = 'mm', $r = 'g', $img = true, $atts = array());
-    ?>
-	<b><?php echo CHtml::encode($data->user->username); ?></b>
+    <br />
 
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('content')); ?>:</b>
-	<?php echo CHtml::encode($data->content); ?>
-	<br />
+    <b><?php echo CHtml::encode($data->getAttributeLabel('content')); ?>:</b>
+    <?php echo CHtml::encode($data->content); ?>
+    <br />
 
 
 </div>

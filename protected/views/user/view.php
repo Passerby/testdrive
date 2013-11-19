@@ -16,20 +16,20 @@ $this->menu=array(
 );
 ?>
 
-<h1>View User #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->username; ?></h1>
+<?php
+echo GlobalFunc::get_gravatar($model->email, $s = 80, $d = 'mm', $r = 'g', $img = true, $atts = array());
+?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
 		'username',
-		'password',
 		'email',
     ),
 ));
 
 ?>
 
-<?php
-echo GlobalFunc::get_gravatar($model->email, $s = 80, $d = 'mm', $r = 'g', $img = true, $atts = array());
-?>
+

@@ -13,9 +13,7 @@
 	<?php echo CHtml::encode($data->username); ?>
 	<br />
 
-    <b><?php
-          $email = $data->email;
-          echo CHtml::encode($email)?>:</b>
+    <b><?php $email = $data->email; echo CHtml::encode($email)?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
     <?php
