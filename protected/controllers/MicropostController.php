@@ -131,7 +131,6 @@ class MicropostController extends Controller
             'criteria'=>array(
                 'condition'=>'user_id=user.id',
                 'with'=>array('user'),
-                'with'=>array('user.role'),
             )
         ));
 

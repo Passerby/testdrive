@@ -115,6 +115,7 @@ class SiteController extends Controller
             $user->password=md5($model->password);
             if($user->validate('email') && $user->save())
             {
+                Yii::app()->authManager->assign("CommonUser", $user->id, '', '');
                 Yii::app()->user->setFlash('success', "Sign up success.");
                 $this->redirect('login');
             }

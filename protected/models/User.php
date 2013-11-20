@@ -30,10 +30,9 @@ class User extends CActiveRecord
         return array(
             array('username, password, email', 'required'),
             array('username, password, email', 'length', 'max'=>128),
-            array('role', 'default', 'value'=>0),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('id, username, role, email', 'safe', 'on'=>'search'),
+            array('id, username, email', 'safe', 'on'=>'search'),
             array('email', 'unique'),
             array('email', 'email', 'message'=>'The email is not correct'),
         );
@@ -47,7 +46,6 @@ class User extends CActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'role'=>array(self::BELONGS_TO, 'Role', 'role'),
         );
     }
 
@@ -61,7 +59,6 @@ class User extends CActiveRecord
             'username' => 'Username',
             'password' => 'Password',
             'email' => 'Email',
-            'role' => 'Role',
         );
     }
 
