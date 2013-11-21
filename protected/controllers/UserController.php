@@ -69,8 +69,6 @@ class UserController extends Controller
         if(isset($_POST['User']))
         {
             $model->attributes=$_POST['User'];
-            CVarDumper::dump($model,10,true);
-            die();
             if($model->save())
                 $this->redirect(array('view','id'=>$model->id));
         }
@@ -123,7 +121,7 @@ class UserController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider=new CActiveDataProvider('User');
+        $dataProvider=new CActiveDatarovider('User');
         $this->render('index',array(
             'dataProvider'=>$dataProvider,
         ));

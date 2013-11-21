@@ -41,6 +41,7 @@ class UserIdentity extends CUserIdentity
     {
         return $this->_id;
     }
+
 	public function getName()
 	{
 		return $this->_username;
