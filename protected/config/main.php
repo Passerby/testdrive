@@ -19,6 +19,7 @@ return array(
         'application.modules.srbac.controllers.SBaseController',
     ),
 
+
     'modules'=>array(
         // uncomment the following to enable the Gii tool
 
