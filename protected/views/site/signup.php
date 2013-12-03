@@ -1,14 +1,17 @@
 <?php
-
-/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
-
 /**
- * haahaha
+ * .
  *
- * @var $this SiteController
- * @var $model SignupForm
- * @var $form CActiveForm
+ * PHP version 5
+ *
+ * @category Default
+ * @package  Default
+ * @author   Luke Du <lukedu@augmentum.con.cn>
+ * @license  http://None None
+ * @version  GIT:master
+ * @link     http://git.augmentum.com.cn/ibuzhai/portal
  */
+
 $this->breadcrumbs=array(
     'Sign up',
 );
@@ -70,31 +73,49 @@ $form=$this->beginWidget(
 
     <div class="row">
         <?php echo $form->labelEx($model, 'password'); ?>
-        <?php echo $form->passwordField($model, 'password',array(
-            'class'=>'form-control',
-            'placeholder'=>'Password',
-            'required'=>'',
-        )); ?>
-        <?php echo $form->error($model,'password'); ?>
+        <?php
+        echo $form->passwordField(
+            $model,
+            'password',
+            array(
+                'class'=>'form-control',
+                'placeholder'=>'Password',
+                'required'=>'',
+            )
+        );
+        ?>
+        <?php echo $form->error($model, 'password'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,'confirmation'); ?>
-        <?php echo $form->passwordField($model,'confirmation',array(
-            'class'=>'form-control',
-            'placeholder'=>'Confirmation',
-            'required'=>'',
-        )); ?>
-        <?php echo $form->error($model,'confirmation'); ?>
+        <?php echo $form->labelEx($model, 'confirmation'); ?>
+        <?php
+        echo $form->passwordField(
+            $model,
+            'confirmation',
+            array(
+                'class'=>'form-control',
+                'placeholder'=>'Confirmation',
+                'required'=>'',
+            )
+        );
+        ?>
+        <?php echo $form->error($model, 'confirmation'); ?>
     </div>
 
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Submit',array(
-            'class'=>'btn btn-lg btn-primary btn-block',
-        )); ?>
+    <?php
+        echo CHtml::submitButton(
+            'Submit',
+            array(
+                'class'=>'btn btn-lg btn-primary btn-block',
+            )
+        );
+    ?>
     </div>
 
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
